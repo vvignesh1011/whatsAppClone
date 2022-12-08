@@ -1,0 +1,31 @@
+.serch{
+    display: flex;
+    width: 100%;
+    background-color: var(--list_background);
+    height: 49px;
+    padding-left: 12px;
+    align-items: center;
+    i{
+    padding: 5px;
+    color: var(--icon_color);
+    
+   }
+}
+.inner_serch{
+    background-color: var(--nav_background);
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    width: 100%;
+    input{
+         margin: 0 32px 0 65px;
+         background-color: inherit;
+         outline: none;
+         border: none;
+         color: var(--icon_color);
+         width: 100%;
+    }
+   
+   
+}

@@ -1,0 +1,161 @@
+.msg_container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+        //background-image: url("/assets/images/walpaper.jpg");
+   // background-repeat: no-repeat;
+    //background-size: cover;
+    background-color: rgba($color: #131c22, $alpha: 1);
+  
+
+}
+
+
+.inner_nav{
+    display: flex;
+    background-color: var(--nav_background);
+    width: 100%;
+    padding: 10px 16px;
+
+    .msg-color{
+        color:var(--icon_color);
+        text-align: center;
+    }
+}
+.profile{
+    width:calc(100% - 140px);
+    display: flex   ;
+    height: 40px;
+    img{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+}
+.options{
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    abbr{
+        padding: 8px;
+    }
+    
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    color: #E9EDEF;
+    margin-left: 15px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.options{
+    display:flex;
+    justify-content:right;
+}
+
+
+.msg_input{
+    background-color: var(--nav_background);
+    display: flex;
+    align-items: center;
+    padding: 5px 17px 5px 10px;
+    width: 100%;
+    min-height: 62px;
+    margin-top: auto;
+    i{
+        color: var(--icon_color);
+        font-size: 24px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.ricon{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    .smily{
+        margin-right: 8px;
+    }
+    .attach{
+        padding: 8px;
+    }
+}
+
+.input{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    //height: 100%;
+    .mic{
+        padding: 5px 10px;
+    }
+}
+
+.inp_inner{
+    display: flex;
+    min-height: 42px;
+    margin: 5px 10px;
+    width: 100%;
+    background-color: var(--msg_input);
+    
+    border-radius: 8px;
+    align-items: center;
+    padding: 9px 12px 11px;
+}
+
+input{
+   min-height: 20px;
+   width: 100%;
+   background-color: inherit;
+   outline: none;
+   border: none;
+   color: aliceblue;
+}
+
+
+.msg_body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 6%;
+    
+
+    .msg{
+        display: flex;
+        justify-content: flex-start;
+        margin: 2px;
+    }
+    
+    .my_msg{
+        display: flex;
+        justify-content: flex-end;
+        margin: 2px;
+    }
+    .mmc{
+        background-color: #005c4b;
+    }
+    .mc{
+        background-color:#202c33;
+    }
+
+    .content{
+        padding: 5px 20px;
+        color: #dde5e6;
+        
+        
+    }
+}
+
+.msg_list{
+    display: flex;
+    flex-direction: column;
+   height: calc(100vh - 122px);
+   overflow: auto;
+}

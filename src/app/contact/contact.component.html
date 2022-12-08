@@ -1,0 +1,31 @@
+
+<div class="contact">
+    <div *ngIf="msgs">
+        <div *ngFor="let msg of msgs">
+        <div class="inner_contact" [class.hover]="hoveredMsg == msg" (mouseout)="hoverout()" (mouseover)="hovered(msg)"  (click)="clicked(msg)" [class.click]="clickedMsg===msg" >
+        <div class="profile">
+            <div *ngIf="msg.profile">
+                <img src="assets/{{msg.profile}}" alt="">
+            </div>
+            <div *ngIf="!msg.profile">
+                <img src="assets/images/blank.jpg" alt="">
+            </div>
+         
+        </div>
+        <div class="outer_msg">
+            <div class="msg">
+                <div class="msg_header">
+                 <div class="msg_heading"><div *ngIf="msg.name">{{msg.name}}</div><div *ngIf="!msg.name">{{msg.mobileNo}}</div></div>
+                 <div class="msg_time">{{msg.msg[(msg.msg.length)-1].time | date:'dd/MM/yy'}}</div>
+                </div>
+                <div class="last_msg">{{msg.msg[(msg.msg.length)-1].content}}</div>
+            </div>
+        </div>
+    
+        </div>  
+    </div>
+    </div>
+    
+
+</div>
+    

@@ -1,0 +1,55 @@
+<div class="msg_container">
+    <div *ngIf="msg">
+         <div class="msg_nav">
+        <nav>
+            <div class="inner_nav">
+                <div class="profile">
+                    <div *ngIf="msg.profile">
+                        <img src="assets/{{msg.profile}}" alt="">
+                    </div>
+                    <div *ngIf="!msg.profile">
+                        <img src="assets/images/blank.jpg" alt="">
+                    </div>
+                    <div class="heading">
+                        {{msg.name}}
+                    </div>
+                </div>
+                
+                <div class="options">
+                    <abbr title="Search msg"><i class='fas fa-search msg-color'></i></abbr>
+                    <abbr title="Options"><i class='bi bi-three-dots-vertical msg-color'></i></abbr>
+                </div>
+               
+            </div>  
+            
+        </nav>
+    </div>
+
+    <div class="msg_list">
+        <div class="msg_body" *ngFor="let msge of msg.msg">
+        <div class="my_msg" *ngIf="msge.owner==true"><div class="content mmc">{{msge.content}}</div></div>
+        <div class="msg" *ngIf="msge.owner!=true"><div class="content mc">{{msge.content}}</div></div>
+    </div>
+    </div>
+    
+
+    <div class="msg_input">
+        <div class="ricon">
+            <span class="smily"><i class="fa fa-smile-o " aria-hidden="true"></i></span>
+            <span class="attach"><i class="fa fa-paperclip fa-flip-vertical " aria-hidden="true" ></i></span>
+        </div>
+
+        <div class="input" >
+            <div class="inp_inner"><input #msg_inp type="text" name="msg" id="msg" placeholder="Type a messages"></div>
+            
+            <div>
+                <span class="mic"><i class="fa fa-paper-plane "  aria-hidden="true" (click)="send(msg_inp.value)"></i></span>
+            </div>
+        </div>
+         
+    </div>
+   
+</div>
+   
+
+</div>

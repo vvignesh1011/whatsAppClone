@@ -1,0 +1,21 @@
+.main_container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color:var(--list_background) ;
+}
+
+.recent_contact{
+    display: inline-block;
+    min-width: 336.5px;
+    width: 54%;
+    border-right: 1px solid lightcoral;
+   
+}
+.msg_container{
+   display: inline-block;
+   width: 100%;
+   height: 100vh;
+  
+   
+}

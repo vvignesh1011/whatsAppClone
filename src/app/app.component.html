@@ -1,0 +1,13 @@
+<div class="main_container">
+    <div class="recent_contact">
+        <app-list></app-list>
+        <app-serch></app-serch>
+       <app-contact (msgEmitter)="msgRecived($event)" ></app-contact>
+    </div>
+    <div class="msg_container">
+      <app-message [msg]="msg" *ngIf="msg" ></app-message>
+      <app-home *ngIf="!msg"></app-home>
+        
+    
+    </div>
+</div>
